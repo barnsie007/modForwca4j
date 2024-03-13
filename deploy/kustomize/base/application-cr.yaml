@@ -6,7 +6,7 @@ metadata:
   name: modresortsx2
 spec:
   replicas: 1
-  applicationImage: IMAGE_REFERENCE
+  applicationImage: default-route-openshift-image-registry.apps.powerta.cp.fyre.ibm.com/wlmod/mod:latest
   expose: true
   volumeMounts:
     - mountPath: /config/variables
@@ -21,7 +21,7 @@ spec:
         name: modresortsx2-config
   manageTLS: true
   license:
-    accept: false #You must set this value to true and add the appropriate license information. See: https://www.ibm.com/docs/en/was-liberty/core?topic=resources-webspherelibertyapplication-custom-resource#cfg-r-crd-wl__license
+    accept: true #You must set this value to true and add the appropriate license information. See: https://www.ibm.com/docs/en/was-liberty/core?topic=resources-webspherelibertyapplication-custom-resource#cfg-r-crd-wl__license
     #edition: IBM WebSphere Application Server
     #metric: Virtual Processor Core (VPC)
     #productEntitlementSource: IBM WebSphere Hybrid Edition
